@@ -1,0 +1,16 @@
+FROM lcr.loongnix.cn/library/golang:1.26-alpine
+
+RUN apk add --no-cache \
+    bash \
+    git \
+    python3 \
+    build-base \
+    ca-certificates \
+    tar \
+    curl \
+    pkgconf 
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+CMD ["/bin/bash"]
