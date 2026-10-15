@@ -1,4 +1,4 @@
-FROM lcr.loongnix.cn/library/golang:1.26-alpine
+FROM lcr.loongnix.cn/library/golang:alpine
 
 RUN apk add --no-cache \
     bash \
