@@ -1,6 +1,8 @@
 name: Auto Build kapacitor (Self-hosted)
 
 on:
+  schedule:
+    - cron: '58 9 * * *'
   workflow_dispatch:
 
 env:
